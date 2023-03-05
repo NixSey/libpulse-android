@@ -30,6 +30,8 @@ jobs:
     steps:
       - checkout
       # Test & Build !
+      - run: gradle dependecies
+      - run: gradle wrapper --gradle-version 1.10
       - run: ./gradlew androidDependencies
       - run: ./gradlew lint test
 
