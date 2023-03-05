@@ -48,7 +48,8 @@ jobs:
       - run: gradle test
       - run: gradle tasks
       # build!
-      - run: gradle build
+      - run: gradle wrapper --gradle-version 1.10
+      - run: ./gradlew build
 
       - store_artifacts:
           path: /build/libs/*
