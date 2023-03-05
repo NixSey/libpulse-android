@@ -44,9 +44,6 @@ jobs:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
 
-      # run tests!
-      - run: gradle test
-      - run: gradle tasks
       # build!
       - run: gradle wrapper --gradle-version 1.10
       - run: ./gradlew build
